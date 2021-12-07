@@ -4,22 +4,76 @@
   <style>
     body {
       font-family: Arial;
+      font-size: 20px;
       margin: 0;
     }
     h1 {
       font-size: 100px;
+      margin: 0;
     }
-    .middle {
-      display: flex;
+    .container {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      overflow: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(100px, 40%) minmax(100px, 10%) 15% auto;
       justify-content: center;
-      align-items: center;
+    }
+    #header {
+      justify-self: center;
+      margin-top: auto;
+      font-size: 75px;
+      font-weight: bold;
+    }
+    #main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-self: center;
+      align-self: center;
+    }
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-self: center;
+      align-self: center;
+    }
+    .link-icon {
+      justify-self: center;
+      align-self: center;
+      position: static;
       text-align: center;
-      min-height: 100vh;
+      padding: 0 10px;
     }
   </style>
   <body>
-    <div class="middle">
-      <h1>Adam Lindberg</h1>
+    <div class="container">
+      <div id="header">Adam Lindberg</div>
+      <div id="main">
+        <a href="https://www.facebook.com/adam.lindberg.31">
+          <img class="link-icon" src="img/facebook.png">
+        </a>
+        <a href="https://www.linkedin.com/in/adam-lindberg-567267a9/">
+          <img class="link-icon" src="img/linkedin.png">
+        </a>
+        <a href="https://github.com/lindberg">
+          <img class="link-icon" src="img/github.png">
+        </a>
+      </div>
+      <!--<div id="header">Adam Lindberg</div>
+      <div id="main">
+        <a href="https://github.com/lindberg">
+          <div class="link-icon">
+            <img src="img/github.png">
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/adam-lindberg-567267a9/">
+          <div class="link-icon">
+            <img src="img/linkedin.png">
+          </div>
+        </a>
+      </div>-->
     </div>
   </body>
 </html>
