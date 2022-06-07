@@ -14,7 +14,7 @@
         ccall('vulnerable_function', null, ['string'], [msg]);
       }
 
-      setTimeout(run_wasm_function, 500);
+      setTimeout(run_wasm_function, 1000);
     </script>
     <p id="xss">Send a GET request with msg parameter to show "Hardcoded msg"!</p>
   </body>
